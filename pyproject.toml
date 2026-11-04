@@ -1,0 +1,25 @@
+[project]
+name = "virtucraft"
+version = "0.1.0"
+description = "VirtuCraft: Headless virtual machine and hypervisor control craft"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=3.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+virtucraft-cli = "virtucraft.cli:main"
+virtucraft = "virtucraft.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.4.0",
+]
